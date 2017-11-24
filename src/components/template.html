@@ -30,11 +30,15 @@
           mode="out-in" 
           name="fade"
         >
-          <img 
-           :key="images[select].src"
-           :src="images[select].src"
-           class="vue-lb-modal-image"
-          >
+          <video 
+          width="570"
+          height="320" 
+          :key="images[select].src"
+          :src="images[select].src"
+          class="vue-lb-modal-image"
+          controls="controls" :poster="images[select].thumb"
+
+          ></video>
         </transition>
 
         <div 
@@ -49,7 +53,7 @@
             {{ select + 1 }}/{{ countImages }}
           </div> 
         </div> 
-
+ 
       </div> 
     </div> <!-- .vue-lb-content -->
     <div class="vue-lb-thumbnail-wrapper">
